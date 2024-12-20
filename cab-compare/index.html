@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickGo - Compare Cab Fares</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzh-N6q0vgIIcdWyVk8MiSl4pTx__r5us&libraries=places"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container text-center">
+            <h1 class="display-4">QuickGo</h1>
+            <p class="lead">Compare and Book the Cheapest Cab with Ease</p>
+        </div>
+    </header>
+
+    <section class="search-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card p-5 shadow-lg search-card">
+                        <h4 class="text-center mb-4 text-secondary">Enter Pickup & Drop Locations</h4>
+                        <form id="locationForm" action="http://localhost:3000/get-fare" method="post">
+                            <div class="mb-3 position-relative">
+                                <label for="pickup" class="form-label">Pickup Location</label>
+                                <button type="button" class="btn btn-location mb-2" id="currentLocationBtn">
+                                    <img src="https://img.icons8.com/ios-filled/20/FFFFFF/marker.png" alt="Location Pin" class="me-2">
+                                    Use Current Location
+                                </button>
+                                <input type="text" id="pickup" class="form-control" name="pickup" placeholder="Enter pickup location" required>
+                            </div>
+                            
+
+                            <div class="mb-3">
+                                <label for="drop" class="form-label">Drop Location</label>
+                                <input type="text" id="drop" name="drop" class="form-control" placeholder="Enter drop location" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-custom w-100 mt-3">Compare Fares</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="fareResults" class="mt-5 d-none">
+                <h3 class="text-center text-white">Available Cab Options</h3>
+                <div class="list-group" id="fareList"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 QuickGo. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./script.js"></script>
+</body>
+</html>

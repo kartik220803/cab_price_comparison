@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Search Section */
+.search-section {
+    background-color: #f8f9fa;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.search-card {
+    border-radius: 12px;
+    background: #ffffff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.search-card:hover {
+    transform: scale(1.03);
+}
+
+/* Custom Button */
+.btn-custom {
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(to right, #2f80ed, #56ccf2);
+}
+
+/* Fare Results */
+#fareResults {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#fareList .list-group-item {
+    background-color: #444;
+    color: white;
+    margin-bottom: 10px;
+    border: none;
+    transition: background 0.2s;
+}
+
+#fareList .list-group-item:hover {
+    background-color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #182848;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Current Location Button Styles */
+.btn-location {
+    display: inline-flex;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-location:hover {
+    background-color: #45a049;
+}
+
+/* Icon Spacing */
+.btn-location img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Fix Layout: Position Button Above Pickup Input */
+.position-relative .btn-location {
+    position: relative;
+    margin-bottom: 5px;
+    display: block;
+}
+
